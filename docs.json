@@ -1,0 +1,27 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Movoa API",
+  "description": "Unlimited AI video generator with sound: on paid plans the tenth take of a shot costs what the first did, and your first clip is free to make right now. Official API, SDK and MCP docs for Movoa (movoa.ai).",
+  "colors": { "primary": "#1E1E1E", "light": "#F8F3EB", "dark": "#1E1E1E" },
+  "favicon": "/favicon.png",
+  "navigation": {
+    "groups": [
+      { "group": "Get started", "pages": ["index", "http-api", "models"] },
+      { "group": "Clients", "pages": ["sdks", "mcp-server"] }
+    ]
+  },
+  "navbar": {
+    "links": [
+      { "label": "Text to video", "href": "https://movoa.ai/video/text-to-video" },
+      { "label": "Photo to video", "href": "https://movoa.ai/video/photo-to-video" }
+    ],
+    "primary": { "type": "button", "label": "Open Movoa", "href": "https://movoa.ai/?utm_source=mintlify&utm_medium=docs" }
+  },
+  "footer": {
+    "socials": {
+      "website": "https://movoa.ai/?utm_source=mintlify&utm_medium=docs",
+      "github": "https://github.com/hanshs474/movoa-mcp"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+---
+title: HTTP API
+description: Submit video jobs, poll run status, and check credit balance on movoa.ai.
+---
+
+Base URL: `https://movoa.ai`. All endpoints accept `POST` with `Authorization: Bearer sk-...` ([create a key](https://movoa.ai/settings/apikeys)).
+
+## 1. Submit a run
+
+```bash
+curl -s -X POST https://movoa.ai/api/ai/generate \
+  -H "Authorization: Bearer $MOVOA_API_KEY" -H "content-type: application/json" \
+  -d '{"provider":"auto","mediaType":"video","model":"minimax-h3","scene":"text-to-video",
+       "prompt":"a paper boat drifting down a rain gutter, low angle, soft water sounds",
+       "options":{"duration":6,"resolution":"480p","aspect_ratio":"16:9","sound":true}}'
+```
+
+## 2. Poll the run
+
+```bash
+curl -s -X POST https://movoa.ai/api/ai/query \
+  -H "Authorization: Bearer $MOVOA_API_KEY" -H "content-type: application/json" \
+  -d '{"taskId":"<taskId>"}'
+```
+
+## 3. Credit balance
+
+```bash
+curl -s -X POST https://movoa.ai/api/user/get-user-credits \
+  -H "Authorization: Bearer $MOVOA_API_KEY"
+```
+
+See [movoa.ai/pricing](https://movoa.ai/pricing) for model credit costs.

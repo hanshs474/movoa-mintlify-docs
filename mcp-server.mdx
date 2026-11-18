@@ -1,0 +1,20 @@
+---
+title: MCP server
+description: Connect Movoa video generation to Claude, Cursor, or Gemini CLI.
+---
+
+Two ways to connect [Movoa](https://movoa.ai/?utm_source=mintlify&utm_medium=docs) to an MCP client:
+
+## Local (stdio)
+
+```bash
+claude mcp add movoa -e MOVOA_API_KEY=sk-... -- npx -y movoa-mcp@0.1.0
+```
+
+## Hosted (Streamable HTTP)
+
+```text
+https://movoa.ai/api/mcp
+```
+
+Pass `Authorization: Bearer sk-...` from [movoa.ai/settings/apikeys](https://movoa.ai/settings/apikeys).
